@@ -1,0 +1,125 @@
+.slider-container {
+    .slider {
+        position: relative;
+        aspect-ratio: 16/5;
+        width: 100%;
+
+        .slides {
+            .slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                inset: 0;
+                cursor: grab;
+                opacity: 0;
+
+                &:active {
+                    cursor: grabbing;
+                }
+
+                &:first-child {
+                    background: linear-gradient(90deg, rgba(97, 155, 42, 1) 0%, rgba(87, 199, 133, 1) 0%, rgba(237, 221, 83, 1) 100%);
+                }
+
+                &:nth-child(2) {
+                    background: linear-gradient(82deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+                }
+
+                &:nth-child(3) {
+                    background: linear-gradient(82deg, rgba(93, 145, 166, 1) 0%, rgba(242, 216, 216, 1) 100%);
+                }
+
+                &:nth-child(4) {
+                    background: linear-gradient(82deg, rgba(149, 241, 250, 1) 0%, rgba(198, 248, 189, 1) 100%);
+                }
+
+                &:last-child {
+                    background: linear-gradient(82deg, rgba(247, 250, 178, 1) 0%, rgba(250, 193, 250, 1) 100%);
+                }
+
+                .slide-content {
+                    text-align: center;
+                }
+            }
+
+            .active {
+                // transition: 1s;
+                opacity: 1;
+            }
+        }
+
+        button {
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: aliceblue;
+            border: 1px solid #d1e1ef;
+            font-size: 1.5rem;
+            color: #777777;
+
+            &:hover {
+                background-color: #d1e1ef;
+                transition: 0.3s;
+            }
+        }
+
+        .prev {
+            left: 2rem;
+        }
+
+        .next {
+            right: 2rem;
+
+        }
+    }
+
+    .controls {
+        .progress-bar {
+            background-color: #d3d3d3;
+            position: relative;
+            cursor: pointer;
+
+            .progress {
+                width: 0;
+                height: 100%;
+                position: absolute;
+                border-radius: 0;
+                background-color: #9b9b9b;
+            }
+
+            .playText {
+                z-index: 1;
+            }
+        }
+
+        .hint {
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .indicators {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0.5rem 0 0.5rem;
+            cursor: pointer;
+
+            .indicator {
+                width: 1rem;
+                height: 1rem;
+                background-color: #bcbcbc;
+                border-radius: 50%;
+            }
+
+            .active {
+                background-color: rgb(232, 31, 9);
+            }
+        }
+    }
+}
+

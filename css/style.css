@@ -1,0 +1,96 @@
+.slider-container .slider {
+  position: relative;
+  aspect-ratio: 16/5;
+  width: 100%;
+}
+.slider-container .slider .slides .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  cursor: grab;
+  opacity: 0;
+}
+.slider-container .slider .slides .slide:active {
+  cursor: grabbing;
+}
+.slider-container .slider .slides .slide:first-child {
+  background: linear-gradient(90deg, rgb(97, 155, 42) 0%, rgb(87, 199, 133) 0%, rgb(237, 221, 83) 100%);
+}
+.slider-container .slider .slides .slide:nth-child(2) {
+  background: linear-gradient(82deg, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+}
+.slider-container .slider .slides .slide:nth-child(3) {
+  background: linear-gradient(82deg, rgb(93, 145, 166) 0%, rgb(242, 216, 216) 100%);
+}
+.slider-container .slider .slides .slide:nth-child(4) {
+  background: linear-gradient(82deg, rgb(149, 241, 250) 0%, rgb(198, 248, 189) 100%);
+}
+.slider-container .slider .slides .slide:last-child {
+  background: linear-gradient(82deg, rgb(247, 250, 178) 0%, rgb(250, 193, 250) 100%);
+}
+.slider-container .slider .slides .slide .slide-content {
+  text-align: center;
+}
+.slider-container .slider .slides .active {
+  opacity: 1;
+}
+.slider-container .slider button {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: aliceblue;
+  border: 1px solid #d1e1ef;
+  font-size: 1.5rem;
+  color: #777777;
+}
+.slider-container .slider button:hover {
+  background-color: #d1e1ef;
+  transition: 0.3s;
+}
+.slider-container .slider .prev {
+  left: 2rem;
+}
+.slider-container .slider .next {
+  right: 2rem;
+}
+.slider-container .controls .progress-bar {
+  background-color: #d3d3d3;
+  position: relative;
+  cursor: pointer;
+}
+.slider-container .controls .progress-bar .progress {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  border-radius: 0;
+  background-color: #9b9b9b;
+}
+.slider-container .controls .progress-bar .playText {
+  z-index: 1;
+}
+.slider-container .controls .hint {
+  font-size: 0.7rem;
+  text-align: center;
+}
+.slider-container .controls .indicators {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0 0.5rem;
+  cursor: pointer;
+}
+.slider-container .controls .indicators .indicator {
+  width: 1rem;
+  height: 1rem;
+  background-color: #bcbcbc;
+  border-radius: 50%;
+}
+.slider-container .controls .indicators .active {
+  background-color: rgb(232, 31, 9);
+}/*# sourceMappingURL=style.css.map */
