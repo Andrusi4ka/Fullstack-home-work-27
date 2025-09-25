@@ -4,6 +4,11 @@
         aspect-ratio: 16/5;
         width: 100%;
 
+        &:hover button {
+            opacity: 1;
+            transition: 0.5s;
+        }
+
         .slides {
             .slide {
                 display: flex;
@@ -61,6 +66,8 @@
             border: 1px solid #d1e1ef;
             font-size: 1.5rem;
             color: #777777;
+            transition: 0.5s;
+            opacity: 0;
 
             &:hover {
                 background-color: #d1e1ef;
@@ -122,4 +129,3 @@
         }
     }
 }
-
